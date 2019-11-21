@@ -36,3 +36,5 @@ export const setDate = day => {
 
   return date
 }
+
+export const GITHUB = 'https://github.com/jaarnie/standup-excuse-generator'

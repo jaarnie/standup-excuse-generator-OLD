@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import { Paper, Grid, Typography, Button } from "@material-ui/core"
+import { Link } from "react-router-dom"
+import { InfoOutlined } from "@material-ui/icons"
 
-import ExcuseCard from "./ExcuseCard"
+import ExcuseCard from "../components/ExcuseCard"
 import {
   YESTERDAY_EXCUSES,
   TODAY_EXCUSES,
@@ -53,11 +55,6 @@ export default function Home() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography component="div" align="center" variant="overline">
-            standup excuse generator
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
           <Paper
             id="yesterday"
             className={classes.paper}
@@ -95,6 +92,13 @@ export default function Home() {
           >
             new excuse
           </Button>
+        </Grid>
+        <Grid item xs={12} style={{ margin: "1vh" }}>
+          <Typography align="center">
+            <Link to="/about">
+              <InfoOutlined />
+            </Link>
+          </Typography>
         </Grid>
       </Grid>
     </div>
