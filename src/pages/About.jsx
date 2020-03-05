@@ -22,7 +22,7 @@ export default function Home() {
         <Grid item xs={12} sm={6} md={6}>
           <Typography variant="h6">
             Tired of thinking what to say during standup? Fret no more and let a
-            robotic generator do it for you! Comes preloaded with six
+            robotic generator do it for you! Comes preloaded with seven
             high-quality excuses for you to breeze through your morning standup
             in a vague and non-incriminating way. <br />
             <br />
