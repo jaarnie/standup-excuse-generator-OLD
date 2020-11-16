@@ -5,7 +5,7 @@ export const YESTERDAY_EXCUSES = [
   "had a huge headache, which i'm sure i mentioned",
   "was researching into something that might help my task",
   "hit a brick wall, but then it came to me",
-  "I think I got Coronavirus, so I was feeling rather ill"
+  "I was writing documentation becuase nobody else is doing it"
 ]
 
 export const TODAY_EXCUSES = [
@@ -15,10 +15,10 @@ export const TODAY_EXCUSES = [
   "I'll have it in a workable state",
   "It'll be done, hopefully",
   "I'll have to speak to devops for some permissions before carrying on",
-  "I'll have to WFH as Coronavirus has got me good"
+  "I'll get to the bottom of this mystery, even if it kills me"
 ]
 
-export const randomNumber = () => Math.floor(Math.random() * 6)
+export const randomNumber = () => Math.floor(Math.random() * 7)
 
 export const setDate = day => {
   let date = null
