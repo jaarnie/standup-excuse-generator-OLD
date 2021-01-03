@@ -1,26 +1,26 @@
 export const YESTERDAY_EXCUSES = [
-  "refactored",
-  "worked on my ticket",
-  "was troubleshooting this thing",
+  'refactored',
+  'worked on my ticket',
+  'was troubleshooting this thing',
   "had a huge headache, which i'm sure i mentioned",
-  "was researching into something that might help my task",
-  "hit a brick wall, but then it came to me",
-  "I was writing documentation becuase nobody else is doing it"
+  'was researching into something that might help my task',
+  'hit a brick wall, but then it came to me',
+  'I was writing documentation becuase nobody else is doing it',
 ]
 
 export const TODAY_EXCUSES = [
-  "I will continue on that",
+  'I will continue on that',
   "I'll hopefully finish that up",
   "I'm gonna talk to the others and see what they say about it",
   "I'll have it in a workable state",
   "It'll be done, hopefully",
   "I'll have to speak to devops for some permissions before carrying on",
-  "I'll get to the bottom of this mystery, even if it kills me"
+  "I'll get to the bottom of this mystery, even if it kills me",
 ]
 
 export const randomNumber = () => Math.floor(Math.random() * 7)
 
-export const setDate = day => {
+export const setDate = (day) => {
   let date = null
 
   const today = new Date()
@@ -28,11 +28,11 @@ export const setDate = day => {
 
   yesterday.setDate(yesterday.getDate() - 1)
 
-  if (day === "today") {
+  if (day === 'today') {
     date = today.toDateString()
   }
 
-  if (day === "yesterday") {
+  if (day === 'yesterday') {
     date = yesterday.toDateString()
   }
 
