@@ -1,15 +1,15 @@
-import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import { Grid, Typography } from "@material-ui/core"
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Grid, Typography } from '@material-ui/core'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   title: {
     padding: theme.spacing(2),
-    color: theme.palette.text.secondary
-  }
+    color: theme.palette.text.secondary,
+  },
 }))
 
 export default function Header() {
@@ -20,9 +20,9 @@ export default function Header() {
         <Grid item xs={12}>
           <Typography
             className={classes.title}
-            component="div"
-            variant="overline"
-            align="center"
+            component='div'
+            variant='overline'
+            align='center'
           >
             standup excuse generator
           </Typography>

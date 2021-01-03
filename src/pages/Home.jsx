@@ -1,27 +1,27 @@
-import React, { useState } from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import { Paper, Grid, Typography, Button } from "@material-ui/core"
-import { Link } from "react-router-dom"
-import { InfoOutlined } from "@material-ui/icons"
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Paper, Grid, Typography, Button } from '@material-ui/core'
+import { Link } from 'react-router-dom'
+import { InfoOutlined } from '@material-ui/icons'
 
-import ExcuseCard from "../components/ExcuseCard"
+import ExcuseCard from '../components/ExcuseCard'
 import {
   YESTERDAY_EXCUSES,
   TODAY_EXCUSES,
   randomNumber,
-  setDate
-} from "../constants/index"
+  setDate,
+} from '../constants/index'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  }
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
 }))
 
 export default function Home() {
@@ -34,19 +34,19 @@ export default function Home() {
     today: todaysExcuses,
     yesterday: yesterdaysExcuses,
     clickToday: todaysExcuses,
-    clickYesterday: yesterdaysExcuses
+    clickYesterday: yesterdaysExcuses,
   })
 
-  const handleCardClick = event => {
+  const handleCardClick = (event) => {
     const clickTarget = event.currentTarget.id
 
-    return clickTarget === "today"
+    return clickTarget === 'today'
       ? setExcuse({ ...excuse, clickToday: todaysExcuses })
       : setExcuse({ ...excuse, clickYesterday: yesterdaysExcuses }) ||
-        clickTarget === "new-excuse-button"
+        clickTarget === 'new-excuse-button'
       ? setExcuse({
           clickToday: todaysExcuses,
-          clickYesterday: yesterdaysExcuses
+          clickYesterday: yesterdaysExcuses,
         })
       : null
   }
@@ -56,12 +56,12 @@ export default function Home() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper
-            id="yesterday"
+            id='yesterday'
             className={classes.paper}
             onClick={handleCardClick}
           >
-            <Typography component="div" align="center" variant="overline">
-              {setDate("yesterday")}
+            <Typography component='div' align='center' variant='overline'>
+              {setDate('yesterday')}
             </Typography>
 
             <ExcuseCard
@@ -72,9 +72,9 @@ export default function Home() {
           </Paper>
         </Grid>
         <Grid item xs={12}>
-          <Paper id="today" className={classes.paper} onClick={handleCardClick}>
-            <Typography component="div" align="center" variant="overline">
-              {setDate("today")}
+          <Paper id='today' className={classes.paper} onClick={handleCardClick}>
+            <Typography component='div' align='center' variant='overline'>
+              {setDate('today')}
             </Typography>
             <ExcuseCard
               defaultExcuse={yesterdaysExcuses}
@@ -83,19 +83,19 @@ export default function Home() {
             />
           </Paper>
         </Grid>
-        <Grid container justify="center">
+        <Grid container justify='center'>
           <Button
-            id="new-excuse-button"
-            variant="outlined"
-            color="primary"
+            id='new-excuse-button'
+            variant='outlined'
+            color='primary'
             onClick={handleCardClick}
           >
             new excuse
           </Button>
         </Grid>
-        <Grid item xs={12} style={{ margin: "1vh" }}>
-          <Typography align="center">
-            <Link to="/about">
+        <Grid item xs={12} style={{ margin: '1vh' }}>
+          <Typography align='center'>
+            <Link to='/about'>
               <InfoOutlined />
             </Link>
           </Typography>
