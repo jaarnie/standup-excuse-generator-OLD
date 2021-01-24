@@ -1,4 +1,4 @@
-http://standup-excuse-generator.herokuapp.com/
+http://www.standupexcusegenerator.com/
 
 
 ## Standup Excuse Generator
