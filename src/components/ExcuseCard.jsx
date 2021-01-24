@@ -15,7 +15,6 @@ const useStyles = makeStyles({
 
 export default function ExcuseCard({ excuseString, today }) {
   const classes = useStyles()
-  const bullet = <span className={classes.bullet}>•</span>
 
   const todayYesterday = () => {
     return (
@@ -30,9 +29,9 @@ export default function ExcuseCard({ excuseString, today }) {
       <CardContent>
         {todayYesterday()}
         <Typography variant='h5'>
-          {bullet}
+          <span className={classes.bullet}>•</span>
           {excuseString || excuseString}
-          {bullet}
+          <span className={classes.bullet}>•</span>
         </Typography>
       </CardContent>
       <CardActions></CardActions>
