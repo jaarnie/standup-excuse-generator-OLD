@@ -1,17 +1,17 @@
-import React from 'react'
-import ReactGA from 'react-ga'
+import React from 'react';
+import ReactGA from 'react-ga';
 
-import './index.css'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { CssBaseline, Container } from '@material-ui/core'
+import './index.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { CssBaseline, Container } from '@material-ui/core';
 
-import Header from './components/Header'
-import Home from './pages/Home'
-import About from './pages/About'
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
 
 export default function App() {
-  ReactGA.initialize('UA-188877942-1')
-  ReactGA.pageview('/')
+  ReactGA.initialize(process.env.REACT_APP_GA);
+  ReactGA.pageview('/');
 
   return (
     <BrowserRouter>
@@ -24,5 +24,5 @@ export default function App() {
         </Switch>
       </Container>
     </BrowserRouter>
-  )
+  );
 }
